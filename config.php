@@ -1,6 +1,6 @@
 <?php
-	$host="127.0.0.1"; // Host name 
-	$username="root"; // Mysql username 
-	$password=""; // Mysql password 
-	$db_name="Login"; // Database name
+	$host="ec2-54-204-39-187.compute-1.amazonaws.com"; // Host name 
+	$username="sswhzfmvaivdih"; // Mysql username 
+	$password="tQpUrD5shCZMaXdl5zU7oALFNg"; // Mysql password 
+	$db_name="d9i9hpqe827fmm"; // Database name
 ?>
