@@ -5,17 +5,19 @@ Developers
 -------------------------
 - [x] Gati Shah: 
 
-Unity ID - gshah
-
-Student ID - 001080029
+		Unity ID - gshah
+		
+		Student ID - 001080029
 - [x] Priyanka Shankaran:
 
-Unity ID - priyan
+		Unity ID - priyan
 
-Student ID - 200022245
+		Student ID - 200022245
 
 Application
 -------------------------
+
+Link: https://still-sea-7195.herokuapp.com
 
 Dynamic graph link: https://morning-forest-9856.herokuapp.com/
 
@@ -78,20 +80,20 @@ Additional behaviors can be chained on as additional methods using the "." forma
 
 ```html
 IN.API.PeopleSearch()
-.fields("firstName", "lastName", "distance", "publicProfileUrl","pictureUrl")
-.params({"keywords": keywords, "count": 10, "sort": "distance"})
-.result(function(result) {
-profHTML ="Search results for keyword "+keywords+" <p>";
-for (var index in result.people.values) {
-profile = result.people.values[index]
-if (profile.pictureUrl) {
-profHTML += "<p><a href=\"" + profile.publicProfileUrl + "\">";
-profHTML += "<img class=img_border height=50 align=\"center\" src=\"" + profile.pictureUrl + "\"></a>";
-profHTML += "<font color='F6358A'><p> Name: " + profile.firstName + " " + profile.lastName + "</br></font> (Profile distance: " + profile.distance + ")</br> You can find me <a href=\"" + profile.publicProfileUrl+"\">here</a></p>"; 
-} //end of if block
-}  //end of for block
-$("#search").html(profHTML);
-}); // end of function
+         .fields("firstName", "lastName", "distance", "publicProfileUrl","pictureUrl")
+         .params({"keywords": keywords, "count": 10, "sort": "distance"})
+         .result(function(result) {
+	  		profHTML ="Search results for keyword "+keywords+" <p>";
+      			for (var index in result.people.values) {
+          			profile = result.people.values[index]
+          			if (profile.pictureUrl) {
+              				profHTML += "<p><a href=\"" + profile.publicProfileUrl + "\">";
+              				profHTML += "<img class=img_border height=50 align=\"center\" src=\"" + profile.pictureUrl + "\"></a>";
+              				profHTML += "<font color='F6358A'><p> Name: " + profile.firstName + " " + profile.lastName + "</br></font> (Profile distance: " + profile.distance + ")</br> You can find me <a href=\"" + profile.publicProfileUrl+"\">here</a></p>"; 
+          		} //end of if block
+          	}  //end of for block
+      $("#search").html(profHTML);
+      }); // end of function
 
 ```
 
@@ -162,6 +164,26 @@ We have used Force - Directed graph to represent the data. The data is in JSON f
 <i><b>Snapshot of the generated graph through a JSON file:</i></b>
 ![alt tag](https://github.ncsu.edu/github-enterprise-assets/0000/1402/0000/0543/1ed24b2a-7f2f-11e4-85b4-9e79eb4b243e.png)
 
+###ClearDB MySQL Database: An Add-on provided by Heroku
+
+Heroku provides for the creation of different apps, with a variety of technologies such as PHP, Ruby on Rails, node.js and so on. Heroku also provides a large variety of add-ons for an app, such as differnt data stores, mobile functionalities, logging applications and search engines. Some of the databases are ClearDB MySQL, PostgreSQL, MongoDB. In this PHP application, we have used a ClearDB MySQL as an add-on database, for creating simple MySQL PHP connectivity. 
+
+### MySQL Workbench: Establishing Remote Access
+
+MySQL workbench provides the facility of establishing connections to remote databases, by using the credentials of the remote database and hostname. The figure below illustrates the connection:
+![alt tag](Images/heroku_conn.jpg)
+
+We can create, edit, update tables and view changes made by the PHP-MySQL interfacing code to the database, if any.
+
+###Google Visualization ToolKit
+
+Google provides a chart gallery and the Visualization API to create several interactive graphs. The graph created in the application is also created similarly:
+![alt tag](Images/graph.jpg) 
+
+###Data retrieval and Data Passing to the Graph:
+
+We have created simple PHP-MySQL interfacing code to pass the values retrieved by querying the database. These values are passed to the JavaScript code used to define the data values and create a graph. The values retrieved from the database are passed as PHP variables to the JavaScript data, which, in turn passes this data as one set of data values of the graph.
+ 
 
 Conclusion and Future Work
 -------------------------
