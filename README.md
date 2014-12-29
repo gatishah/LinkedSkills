@@ -17,7 +17,7 @@ Developers
 Application
 -------------------------
 
-Dynamic graph link: https://morning-forest-9856.herokuapp.com/
+Link: https://still-sea-7195.herokuapp.com
 
 Github: https://github.ncsu.edu/CSC510-Fall2014/Technical-LinkedSkills
 
